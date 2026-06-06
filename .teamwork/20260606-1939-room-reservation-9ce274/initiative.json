@@ -1,0 +1,33 @@
+{
+  "name": "20260606-1939-room-reservation-9ce274",
+  "project": "room-reservation",
+  "created": "2026-06-06T19:39:00+00:00",
+  "status": "open",
+  "language": "pt-BR",
+  "definitions": {
+    "glossary": "glossary.md",
+    "decisions": "decisions.md"
+  },
+  "phases": {
+    "origination": {
+      "started": "2026-06-06T19:39:00+00:00",
+      "finishedAt": "2026-06-06T21:22:17+00:00",
+      "state": "frozen",
+      "templateHash": "6d91450cbf11f615699612c7b47c8c7f6876ba4ce0a85a721196182479f9fe4f",
+      "readiness": 74,
+      "produces": "origination-record",
+      "consumes": [],
+      "artifacts": {
+        "document": "origination/target-document.md",
+        "canonical": "origination/output/humanized.md",
+        "final": "origination/final/room-reservation-001.md",
+        "manifest": "origination/output/manifest.md"
+      },
+      "owes": [
+        { "ref": "DiscoveryDirecionada", "to": "readiness", "status": "pending", "note": "Descoberta direcionada (D001): quantificar impacto (nº de choques/semana × minutos; valor dos negócios adiados) e validar viabilidade da integração com agenda corporativa (Google/Outlook)." },
+        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Escalação ao CTO obrigatória (D002): revisão de viabilidade/arquitetura da integração com agenda corporativa antes do congelamento de escopo." },
+        { "ref": "GreenfieldConfirmation", "to": "readiness", "status": "pending", "note": "Confirmar inexistência de ferramenta/processo informal (planilha/quadro/calendário) antes de classificar formalmente como greenfield." }
+      ]
+    }
+  }
+}
