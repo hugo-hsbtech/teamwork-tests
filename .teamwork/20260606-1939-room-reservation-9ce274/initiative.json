@@ -28,6 +28,24 @@
         { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Escalação ao CTO obrigatória (D002): revisão de viabilidade/arquitetura da integração com agenda corporativa antes do congelamento de escopo." },
         { "ref": "GreenfieldConfirmation", "to": "readiness", "status": "pending", "note": "Confirmar inexistência de ferramenta/processo informal (planilha/quadro/calendário) antes de classificar formalmente como greenfield." }
       ]
+    },
+    "intake": {
+      "started": "2026-06-06T21:57:16+00:00",
+      "finishedAt": "2026-06-06T22:15:48+00:00",
+      "state": "frozen",
+      "templateHash": "e93729d8e292a99e987b93b8dd5a139cec2d980f97f0e63ac02315ab50c6f8dd",
+      "readiness": 100,
+      "triageReady": true,
+      "decision": "Discovery",
+      "produces": "intake-record",
+      "consumes": ["origination-record"],
+      "artifacts": {
+        "document": "intake/intake-record.md"
+      },
+      "owes": [
+        { "ref": "DiscoveryDirecionada", "to": "intake", "status": "open", "note": "Descoberta direcionada (D003): (1) quantificar impacto (nº de choques/semana × minutos; valor dos negócios adiados); (2) validar viabilidade da integração com agenda corporativa (Google/Outlook); (3) caracterizar o processo informal de reserva de salas existente hoje. Re-triar ao encerrar (~1–1,5 sem). Ato 2 (RP) não roda até reabrir Product Ready." },
+        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Escalação ao CTO (D002): revisão de viabilidade/arquitetura da integração com agenda corporativa antes do congelamento de escopo." }
+      ]
     }
   }
 }
