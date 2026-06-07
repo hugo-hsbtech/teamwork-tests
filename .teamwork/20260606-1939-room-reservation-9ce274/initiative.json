@@ -31,20 +31,44 @@
     },
     "intake": {
       "started": "2026-06-06T21:57:16+00:00",
-      "finishedAt": "2026-06-06T22:15:48+00:00",
+      "finishedAt": "2026-06-07T00:01:49+00:00",
       "state": "frozen",
+      "version": "v3",
       "templateHash": "e93729d8e292a99e987b93b8dd5a139cec2d980f97f0e63ac02315ab50c6f8dd",
       "readiness": 100,
       "triageReady": true,
-      "decision": "Discovery",
+      "decision": "Product Ready",
       "produces": "intake-record",
       "consumes": ["origination-record"],
       "artifacts": {
         "document": "intake/intake-record.md"
       },
       "owes": [
-        { "ref": "DiscoveryDirecionada", "to": "intake", "status": "open", "note": "Descoberta direcionada (D003): (1) quantificar impacto (nº de choques/semana × minutos; valor dos negócios adiados); (2) validar viabilidade da integração com agenda corporativa (Google/Outlook); (3) caracterizar o processo informal de reserva de salas existente hoje. Re-triar ao encerrar (~1–1,5 sem). Ato 2 (RP) não roda até reabrir Product Ready." },
-        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Escalação ao CTO (D002): revisão de viabilidade/arquitetura da integração com agenda corporativa antes do congelamento de escopo." }
+        { "ref": "DiscoveryValorRS", "to": "intake", "status": "resolved", "note": "Descoberta estendida (D005) ENCERRADA (D007): valor R$ quantificado — 9 adiamentos, pipeline ~R$700k; R$111k perdidos (2 negócios), R$90k em risco (1 aberto), todos prospecção de novos negócios. Re-triagem → Product Ready." },
+        { "ref": "DiscoveryDirecionada", "to": "intake", "status": "resolved", "note": "D003 — 3/4 itens fechados (D006): impacto QUANTIFICADO (9 conflitos/5sem, ~3 dias atraso, 78% c/ negócio adiado → ALTO); integração VIÁVEL/de-arriscada (só Google Calendar, sem SSO, auth simples); processo informal CARACTERIZADO (mural+Forms+WhatsApp, secretária → natureza Híbrida)." },
+        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Escalação ao CTO (D002) DE-ARRISCADA: Technical Assessment LEVE — confirmar fluxo OAuth do Google Calendar (sem SSO, auth simples). Antes do congelamento de escopo." }
+      ]
+    },
+    "readiness": {
+      "started": "2026-06-07T00:01:49+00:00",
+      "finishedAt": "2026-06-07T01:11:39+00:00",
+      "state": "frozen",
+      "freeze": "provisional",
+      "version": "v1",
+      "templateHash": "343566f7940e5c2cc8344853178fcc2a09aed59fd7518e76aefb90891c5a1dbd",
+      "readiness": 81,
+      "produces": "readiness-package",
+      "consumes": ["origination-record", "intake-record"],
+      "artifacts": {
+        "document": "readiness/readiness-document.md",
+        "canonical": "readiness/output/humanized.md",
+        "enriched": "readiness/output/enriched.md",
+        "final": "readiness/final/room-reservation-001.md",
+        "manifest": "readiness/output/manifest.md"
+      },
+      "owes": [
+        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Technical Assessment LEVE devido antes do freeze pleno: fluxo OAuth Google Calendar, modelo de sync uma via (sistema→Calendar), atomicidade anti-double-booking sob concorrência (first-commit-wins), latência ≤2min. Freeze do RP é PROVISÓRIO até Status=signed." },
+        { "ref": "EffortEstimate", "to": "tech-assessment", "status": "deferred", "note": "Estimativa firme de esforço/custo/prazo é do CTO/Tech Lead (sem dado upstream). Não bloqueia o RP, mas bloqueia o compromisso de desenvolvimento." }
       ]
     }
   }
