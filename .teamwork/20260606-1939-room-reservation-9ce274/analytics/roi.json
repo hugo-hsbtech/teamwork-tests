@@ -1,0 +1,336 @@
+{
+  "_meta": {
+    "generatedBy": "ROI Reporter",
+    "generatedAt": "2026-06-07",
+    "reportVersion": 1,
+    "language": "pt-BR",
+    "pricingAsOf": "2026-06-05",
+    "pricingRef": "SKILL_DIR/assets/pricing.json"
+  },
+  "initiative": "20260606-1939-room-reservation-9ce274",
+  "name": "Sistema de Reserva de Salas de Reunião",
+  "project": "room-reservation",
+  "status": "open",
+  "language": "pt-BR",
+  "leadTime": {
+    "started": "2026-06-06T19:39:00+00:00",
+    "finishedAt": "2026-06-07T00:01:49+00:00",
+    "calendarMinutes": 263,
+    "calendarHuman": "~4h 23min",
+    "source": "artifact"
+  },
+  "totals": {
+    "usd": {
+      "notCaptured": true,
+      "reason": "cost-ledger.jsonl ausente em analytics/ — hook de captura de custo não registrou esta iniciativa"
+    },
+    "tokens": {
+      "notCaptured": true,
+      "reason": "cost-ledger.jsonl ausente em analytics/ — hook de captura de custo não registrou esta iniciativa",
+      "breakdown": {
+        "input": null,
+        "output": null,
+        "cacheCreate": null,
+        "cacheRead": null
+      }
+    },
+    "modelMix": {
+      "notCaptured": true,
+      "reason": "cost-ledger.jsonl ausente em analytics/ — hook de captura de custo não registrou esta iniciativa"
+    },
+    "finalReadiness": {
+      "value": 92,
+      "phase": "prd",
+      "source": "artifact"
+    }
+  },
+  "phases": [
+    {
+      "phase": "origination",
+      "started": "2026-06-06T19:39:00+00:00",
+      "finishedAt": "2026-06-06T21:22:17+00:00",
+      "wallClockMinutes": 103,
+      "wallClockHuman": "~1h 43min",
+      "state": "frozen",
+      "readiness": 74,
+      "tokens": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "usd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "agentSpawns": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "loopRounds": { "value": "v1→v4 (4 revisões)", "source": "artifact" },
+      "canonicalQuestions": { "value": 11, "source": "artifact" },
+      "outcome": "Entregue ao intake; 3 owes gerados (DiscoveryDirecionada D001, TechAssessmentRef D002, GreenfieldConfirmation)",
+      "owesGenerated": ["DiscoveryDirecionada", "TechAssessmentRef", "GreenfieldConfirmation"],
+      "source": "artifact"
+    },
+    {
+      "phase": "intake",
+      "started": "2026-06-06T21:57:16+00:00",
+      "finishedAt": "2026-06-07T00:01:49+00:00",
+      "wallClockMinutes": 124,
+      "wallClockHuman": "~2h 04min",
+      "state": "frozen",
+      "version": "v3",
+      "readiness": 100,
+      "triageDecision": "Product Ready",
+      "tokens": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "usd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "agentSpawns": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "loopRounds": { "value": "v3; D003 + D005 (2 rodadas de descoberta)", "source": "artifact" },
+      "canonicalQuestions": { "value": 12, "source": "artifact" },
+      "reworkEvents": {
+        "count": 3,
+        "detail": ["1 supersedição Q002→Q005", "2 re-scorings Q002/Q004 via D003/D005"],
+        "source": "artifact"
+      },
+      "outcome": "Triage: Product Ready (pós D003+D005); re-triagem de Discovery → Product Ready",
+      "source": "artifact"
+    },
+    {
+      "phase": "readiness",
+      "started": "2026-06-07T00:01:49+00:00",
+      "finishedAt": "2026-06-07T01:11:39+00:00",
+      "wallClockMinutes": 69,
+      "wallClockHuman": "~1h 09min",
+      "state": "frozen",
+      "freeze": "provisional→full (upgrade pós TA assinado)",
+      "version": "v1→v4",
+      "readiness": 81,
+      "tokens": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "usd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "agentSpawns": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "loopRounds": { "value": "v1→v4 (4 revisões); 8 confirmações C-Q01..C-Q08; 2 conflitos de auditoria resolvidos", "source": "artifact" },
+      "canonicalQuestions": { "value": 8, "note": "confirmações C-Q01..C-Q08", "source": "artifact" },
+      "coverage": {
+        "nfrs": 10,
+        "edgeCases": 13,
+        "adrs": 6,
+        "source": "artifact"
+      },
+      "outcome": "Freeze provisório → pleno (após TA assinado); TechAssessmentRef e EffortEstimate resolvidos",
+      "source": "artifact"
+    },
+    {
+      "phase": "assessment",
+      "started": "2026-06-07T00:00:00+00:00",
+      "finishedAt": "2026-06-07T00:00:00+00:00",
+      "wallClockMinutes": 0,
+      "note": "timestamps idênticos em initiative.json — duração intra-fase não resolúvel por artifact",
+      "state": "frozen",
+      "freeze": "full",
+      "version": "v1→v3",
+      "readiness": 88,
+      "signOffReady": true,
+      "verdict": "Viável com ressalvas",
+      "confidence": 86,
+      "verdictAuthor": "cto_authored",
+      "tokens": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "usd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "agentSpawns": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "loopRounds": { "value": "v1→v3 (3 revisões); 16 entradas estruturadas; DISC-001 aberto", "source": "artifact" },
+      "structuredEntries": { "value": 16, "source": "artifact" },
+      "caveats": ["R1 OAuth/Workspace gated DISC-001", "R2 exclusão transacional", "R3 sync uma-via", "R4 LGPD/DPO"],
+      "adrsApproved": 5,
+      "adrsGated": 1,
+      "risksConsolidated": 11,
+      "outcome": "Viável com ressalvas (conf 86); signOffReady; sem veto; DISC-001 escalado para execução",
+      "source": "artifact"
+    },
+    {
+      "phase": "prd",
+      "started": "2026-06-07T00:00:00+00:00",
+      "finishedAt": "2026-06-07T00:00:00+00:00",
+      "wallClockMinutes": 0,
+      "note": "timestamps idênticos em initiative.json — duração intra-fase não resolúvel por artifact",
+      "state": "frozen",
+      "version": "v1",
+      "readiness": 92,
+      "handoffReady": true,
+      "status": "Accepted",
+      "deliveredToPm": "2026-06-07",
+      "downstreamReady": true,
+      "escalated": true,
+      "signOff": { "po": "RP Congelado (freezeReady)", "cto": "Viável com ressalvas", "date": "2026-06-07" },
+      "tokens": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "usd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "agentSpawns": { "notCaptured": true, "reason": "cost-ledger ausente" },
+      "loopRounds": { "value": "v1 (3 sub-revisões R01→R03); escalated=true", "source": "artifact" },
+      "canonicalQuestions": { "value": 7, "source": "artifact" },
+      "outcome": "PRD Accepted; dual sign-off PO+CTO 2026-06-07; delivered-to-pm; downstreamReady",
+      "source": "artifact"
+    }
+  ],
+  "process": {
+    "totalCanonicalQuestions": {
+      "value": 30,
+      "breakdown": { "origination": 11, "intake": 12, "prd": 7 },
+      "note": "Q### canônicas próprias; readiness usou 8 confirmações C-Q; assessment usou 16 entradas estruturadas",
+      "source": "artifact"
+    },
+    "totalReworkEvents": {
+      "value": 6,
+      "breakdown": [
+        "1 supersedição (Q002→Q005, intake)",
+        "2 re-scorings (Q002/Q004 via D003/D005, intake)",
+        "1 upgrade de freeze (RP provisório→pleno)",
+        "2 conflitos de auditoria resolvidos (C2 premissas, C4 sync bidirecional→uma-via)"
+      ],
+      "templateRestarts": 0,
+      "pmRejections": 0,
+      "ctoVetoes": 0,
+      "source": "artifact"
+    },
+    "blockingSectionCoverage": { "value": "100%", "phases": 5, "source": "artifact" },
+    "escalationPath": "D002 → TA Leve de-arriscado (D003) → TA assinado (Viável com ressalvas) → merge no PRD (escalated=true)",
+    "consistencyAudit": {
+      "contradictionsAB": 0,
+      "invariantAB": "A.7↔B.4 = 10 NFRs 1:1 confirmados",
+      "scopeReconciliation": "escopo do RP mantido integralmente",
+      "source": "artifact"
+    }
+  },
+  "drivers": {
+    "topAgentsByUsd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "topModelsByUsd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "cacheHitRatio": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "cacheSavingsUsd": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "automationLeverage": { "notCaptured": true, "reason": "cost-ledger ausente" }
+  },
+  "roi": {
+    "costToReadiness": { "notCaptured": true, "reason": "cost-ledger ausente — USD total não disponível" },
+    "throughputPerDollar": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "throughputPerHour": { "notCaptured": true, "reason": "cost-ledger ausente — tempo de computação ativa não disponível" },
+    "throughputPerMtok": { "notCaptured": true, "reason": "cost-ledger ausente" },
+    "valueAnchoredRoi": {
+      "notCaptured": true,
+      "reason": "cost-ledger ausente — denominador (custo normalizado) indisponível; numerador (value score) disponível",
+      "label": "estimate",
+      "valueScore": 82
+    },
+    "gateSavings": {
+      "applicable": false,
+      "reason": "Demanda percorreu o pipeline completo (origination→prd→delivered-to-pm) sem veto, rejeição ou bloqueio antecipado. Triagem foi elevada de Discovery para Product Ready (gate como qualificador, não interruptor). Sem iniciativas-irmãs para baseline comparável."
+    },
+    "documentedEffortProxy": {
+      "value": "~54 dias-pessoa + spike DISC-001 ~2–4 dias",
+      "source": "artifact — TA-2026-001 (cto_authored, estimativa firme)",
+      "note": "Proxy de esforço de execução, não custo de análise/pipeline"
+    },
+    "valueBreakdown": [
+      {
+        "dimension": "Reach",
+        "weight": 25,
+        "score": 78,
+        "weighted": 19.5,
+        "justification": "Afeta empresa toda via conflitos de agenda; alcance amplo mas sem headcount exato. Risco de adoção (R01) e natureza híbrida deprimem levemente.",
+        "citation": "origination-record §Problema / RP §Personas",
+        "label": "estimate",
+        "source": "artifact"
+      },
+      {
+        "dimension": "Impacto / severidade da dor",
+        "weight": 30,
+        "score": 90,
+        "weighted": 27.0,
+        "justification": "9 conflitos em 5 semanas, ~3 dias atraso médio, 78% com negócio adiado, R$111k perdidos, R$90k em risco, pipeline ~R$700k. Valor quantificado mais forte do pipeline.",
+        "citation": "D005 / intake-record §Valor / TA §Evidências",
+        "label": "estimate",
+        "source": "artifact"
+      },
+      {
+        "dimension": "Objetivos estratégicos",
+        "weight": 20,
+        "score": 72,
+        "weighted": 14.4,
+        "justification": "Alinha a eficiência operacional e suporte a receita, mas encaixe de visão descrito como tangencial no critério 3 da triagem.",
+        "citation": "RP §Objetivos / intake-record §Triagem critério 3",
+        "label": "estimate",
+        "source": "artifact"
+      },
+      {
+        "dimension": "Mensurabilidade",
+        "weight": 15,
+        "score": 85,
+        "weighted": 12.75,
+        "justification": "Métricas de sucesso definidas e quantificáveis: zero-conflitos, 80% redução, uptime, adoção >70% em 90 dias. 10 NFRs documentados. Linha de integração pende DISC-001.",
+        "citation": "RP §Métricas de sucesso / TA §NFRs",
+        "label": "estimate",
+        "source": "artifact"
+      },
+      {
+        "dimension": "Confiança de valor",
+        "weight": 10,
+        "score": 80,
+        "weighted": 8.0,
+        "justification": "Valor central em disposições reais (validado D005). Dois débitos abertos (DISC-001, LGPD) introduzem incerteza residual.",
+        "citation": "assessment §Ressalvas R1+R4 / prd §owes",
+        "label": "estimate",
+        "source": "artifact"
+      }
+    ],
+    "valueScore": {
+      "value": 82,
+      "calculation": "(78×25 + 90×30 + 72×20 + 85×15 + 80×10) / 100 = 8165/100 ≈ 82",
+      "label": "estimate",
+      "source": "artifact"
+    },
+    "valueDampeners": [
+      "Valor quantificado (R$111k) é receita nova não-recorrente já perdida — irrecuperável; o sistema previne perda futura",
+      "R$90k em risco pode não recuperar (R04)",
+      "Adoção é o maior risco isolado (R01 Alta/Alto)",
+      "DISC-001 aberto pode forçar revisão de escopo da integração (ADR-006 gated)"
+    ]
+  },
+  "open": {
+    "owes": [
+      {
+        "ref": "DISC-001",
+        "alias": "DiscoverySpike",
+        "originPhase": "assessment",
+        "to": "execução",
+        "status": "aberto",
+        "owner": "CTO/Tech Lead + TI",
+        "estimatedDays": "~2–4 dias",
+        "description": "Spike Google Workspace/OAuth: escopos concedíveis, grant a apps de terceiros, modelo de credencial (ADR-006 gated), quotas Calendar API + caracterização do processo manual. Condiciona NFR-02/06/08, ADR-006, re-firmação da linha de integração. Ressalva R1 do veredito.",
+        "source": "artifact"
+      },
+      {
+        "ref": "LgpdReview",
+        "originPhase": "prd",
+        "to": "execução",
+        "status": "aberto",
+        "owner": "Jurídico/DPO",
+        "description": "Revisão LGPD: base legal, retenção de dados, exclusão a pedido (NFR-07 / ressalva R4). Pré-condição de release.",
+        "source": "artifact"
+      }
+    ],
+    "parked": {
+      "caveats": ["R1 OAuth/Workspace", "R2 exclusão transacional", "R3 sync uma-via", "R4 LGPD/DPO"],
+      "adrsGated": ["ADR-006 — modelo de credencial OAuth, pende DISC-001"],
+      "risksCarriedToExecution": {
+        "product": ["R01 adoção Alta/Alto", "R02 resistência cultural", "R03 dados/histórico", "R04 recuperação R$90k", "R05 dependência de agenda corporativa"],
+        "technical": ["RT01 quotas Calendar API", "RT02 latência sync", "RT03 conflitos simultâneos", "RT04 autenticação/segurança", "RT05 migração de dados", "RT06 disponibilidade"]
+      },
+      "externalDependencies": ["Google Calendar API (crítica)", "infraestrutura TI interna", "Jurídico/DPO"],
+      "source": "artifact"
+    },
+    "notCaptured": [
+      {
+        "family": "A — Investimento / consumo",
+        "metrics": ["tokens totais", "tokens por tipo/fase/agente", "USD total", "USD por fase/agente/modelo", "mix de modelos", "economia de cache", "taxa de cache-hit", "invocações de agentes", "turns do orquestrador"],
+        "reason": "cost-ledger.jsonl ausente em analytics/ — hook de captura de custo não registrou esta iniciativa"
+      },
+      {
+        "family": "B — Tempo / duração (parcial)",
+        "metrics": ["tempo de computação ativa", "gap de latência humana", "razão ativo/wall-clock"],
+        "note": "Wall-clock por fase disponível via initiative.json [artifact]; métricas de computação ativa dependem do ledger",
+        "reason": "cost-ledger.jsonl ausente em analytics/"
+      },
+      {
+        "family": "E — Composites de ROI (parcial)",
+        "metrics": ["custo-para-prontidão", "throughput por dólar/hora/Mtok", "ROI ancorado em valor (denominador)", "disciplina de cache", "alavancagem de automação"],
+        "note": "Score de valor (estimate, 82/100) e readiness final (92/100) estão disponíveis",
+        "reason": "dependem da família A; cost-ledger ausente"
+      }
+    ]
+  }
+}
