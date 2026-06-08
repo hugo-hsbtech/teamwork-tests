@@ -67,9 +67,64 @@
         "manifest": "readiness/output/manifest.md"
       },
       "owes": [
-        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "deferred", "note": "Technical Assessment LEVE devido antes do freeze pleno: fluxo OAuth Google Calendar, modelo de sync uma via (sistema→Calendar), atomicidade anti-double-booking sob concorrência (first-commit-wins), latência ≤2min. Freeze do RP é PROVISÓRIO até Status=signed." },
-        { "ref": "EffortEstimate", "to": "tech-assessment", "status": "deferred", "note": "Estimativa firme de esforço/custo/prazo é do CTO/Tech Lead (sem dado upstream). Não bloqueia o RP, mas bloqueia o compromisso de desenvolvimento." }
+        { "ref": "TechAssessmentRef", "to": "tech-assessment", "status": "signed", "signedBy": "assessment", "link": "assessment/technical-assessment.md", "verdict": "Viável com ressalvas", "note": "DESCARREGADO pelo TA-2026-001 (Signed off, 2026-06-07, conf 86). Veredito Viável com ressalvas: OAuth Google Calendar viável com ressalva de config do Workspace (gated DISC-001); sync uma-via confirmado; atomicidade first-commit-wins via exclusão transacional (ADR-001); latência ≤2min alcançável. Freeze do RP-2026-001 passa de PROVISÓRIO a PLENO." },
+        { "ref": "EffortEstimate", "to": "tech-assessment", "status": "resolved", "link": "assessment/technical-assessment.md", "note": "RESOLVIDO pelo TA-2026-001: estimativa firme do CTO ~54 dias-pessoa de desenvolvimento + spike de Discovery ~2 a 4 dias (cto_authored). Linha de Integração/OAuth a re-firmar após DISC-001." }
       ]
+    },
+    "assessment": {
+      "started": "2026-06-07T00:00:00+00:00",
+      "finishedAt": "2026-06-07T00:00:00+00:00",
+      "state": "frozen",
+      "freeze": "full",
+      "version": "v1",
+      "templateHash": "b9590cf5ac7a27f9b05cde23643ec98f1f88df1134dc9721281a7d6b65a6da23",
+      "readiness": 88,
+      "signOffReady": true,
+      "decision": "Signed off",
+      "verdict": "Viável com ressalvas",
+      "produces": "technical-assessment",
+      "consumes": ["readiness-package", "intake-record"],
+      "nature": "Híbrido",
+      "kbStatus": "created",
+      "techLandscape": "tech-landscape-room-reservation.md",
+      "artifacts": {
+        "document": "assessment/technical-assessment.md",
+        "canonical": "assessment/output/humanized.md",
+        "enriched": "assessment/output/enriched.md",
+        "final": "assessment/final/room-reservation-001.md",
+        "manifest": "assessment/output/manifest.md"
+      },
+      "owes": [
+        { "ref": "DiscoverySpike", "id": "DISC-001", "to": "execution", "status": "open", "note": "Documentar ambiente Google Workspace/OAuth (escopos concedíveis, grant a apps de terceiros, modelo de credencial [ADR-006 gated], quotas Calendar API) + finalizar caracterização do processo manual. Owner CTO/Tech Lead + TI; ~2 a 4 dias. Destrava current-state, ADR-006, NFR-02/06/08 e a re-firmação da estimativa de integração. Ressalva R1 do veredito." }
+      ]
+    },
+    "prd": {
+      "started": "2026-06-07T00:00:00+00:00",
+      "finishedAt": "2026-06-07T00:00:00+00:00",
+      "state": "frozen",
+      "version": "v1",
+      "templateHash": "46da764df9f84c7682c82c210bb3b6f5a2294296ee5d9fb0836bcea1ddd7c1e5",
+      "readiness": 92,
+      "handoffReady": true,
+      "status": "Accepted",
+      "deliveredToPm": "2026-06-07",
+      "produces": "prd",
+      "consumes": ["readiness-package", "technical-assessment", "intake-record"],
+      "escalated": true,
+      "verdict": "Viável com ressalvas",
+      "signOff": { "po": "RP Congelado (freezeReady)", "cto": "Viável com ressalvas", "date": "2026-06-07" },
+      "artifacts": {
+        "document": "prd/prd.md",
+        "canonical": "prd/output/humanized.md",
+        "enriched": "prd/output/enriched.md",
+        "final": "prd/final/room-reservation-001.md",
+        "manifest": "prd/output/manifest.md"
+      },
+      "owes": [
+        { "ref": "DiscoverySpike", "id": "DISC-001", "to": "execution", "status": "open", "note": "Carregado do TA para a execução: spike Google Workspace/OAuth (escopos, grant a apps de terceiros, modelo de credencial/ADR-006, quotas Calendar API). Owner CTO/Tech Lead + TI; ~2 a 4 dias. Condiciona NFR-02/06/08 + ADR-006 + re-firmação da linha de integração. Ressalva R1 do veredito." },
+        { "ref": "LgpdReview", "to": "execution", "status": "open", "note": "Revisão LGPD Jurídico/DPO (NFR-07 / ressalva R4) — base legal, retenção, exclusão a pedido. Pré-condição de release." }
+      ],
+      "downstreamReady": true
     }
   }
 }
